@@ -97,10 +97,47 @@ LTSpice simulation:
 
 ### Op-Amp
 
+![op-amp](ap-amp.png)
 
+The voltage is not high enough, so an op-amp is added to increase the output voltage.
+Since the output voltage is about 4.7V we want to double that to 9.4V.
+
+Relative resistor values:
+
+**1)** Av = Vout/Vin = 2
+
+**2)** (Vout - Vin)/R1 = Vin/R2 -> Vout = Vin * (R1/R2) + Vin -> Vout/Vin = R1/R2 + 1 = Av = 2
+
+Thus, R1/R2 = 1 -> R1 = R2
+
+I decided to use a resistance value of 5,000 ohms for each resistor.
+
+The circuit so far:
+
+![op-amp-supply](op-amp-supply.png)
+
+When running simulations, we find that this design cannot support an output current of 80mA:
+
+![op-amp-table](op-amp-table.png)
+
+This is because the Op-Amp doesn't support an output current above 40mA.
 
 ### BJT
 
+![bjt](bjt.png)
+
+The BJT will allow us to meet the 80mA specification. 
+This is because we can get some current from elsewhere in the circuit to offload what is generated from the op-amp.
+
+![bjt-in-circuit](bjt-in-circuit.png)
+
+Our final design schematic:
+
+![final-schematic](final-schematic.png)
+
+LTSpice simulations:
+
+![final-design-table](final-design-table.png)
 
 ### Final Design
 
