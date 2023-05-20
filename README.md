@@ -54,7 +54,7 @@ The next few sections will add on one part of the design, explaining why each pa
 We use the full bridge rectifier to be able to fully utilize all signal power.
 This gives us the wave shown:
 
-![bridge-rect-wave](bridge-rect-wave.png)
+![bridge-rect-wave2](bridge-rect-wave2.png)
 
 ### Regulator
 
@@ -89,7 +89,7 @@ Vripple,c = I/(fC) -> C = I/(f\*Vripple,c) = 80/(120 * 1.93) = 345uF ~ 350uF
 
 Design so far:
 
-![low-V-supply](low-V-supply.png)
+![low-V-supply2](low-V-supply2.png)
 
 LTSpice simulation:
 
