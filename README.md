@@ -137,7 +137,7 @@ Our final design schematic:
 
 LTSpice simulations:
 
-![final-design-table](final-design-table.png)
+![final-supply-table](final-supply-table.png)
 
 ### Final Design
 
