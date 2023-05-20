@@ -97,7 +97,7 @@ LTSpice simulation:
 
 ### Op-Amp
 
-![op-amp](ap-amp.png)
+![op-amp](op-amp.png)
 
 The voltage is not high enough, so an op-amp is added to increase the output voltage.
 Since the output voltage is about 4.7V we want to double that to 9.4V.
