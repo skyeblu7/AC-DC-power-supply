@@ -47,22 +47,62 @@ This is an AC-DC power supply with linear regulator. The specifications are:
 
 The next few sections will add on one part of the design, explaining why each part is needed and incrementally adding onto the circuit design.
 
-## Rectifier
+### Rectifier
+
+![bridge-rectifier](full-bridge-rectifier.png)
+
+We use the full bridge rectifier to be able to fully utilize all signal power.
+This gives us the wave shown:
+
+![bridge-rect-wave](bridge-rect-wave.png)
+
+### Regulator
+
+![regulator](regulator.png)
+
+We used a reversed biased zener diode to regulate the voltage. 
+When using a zener diode, we know there is a threshold current I such that I +/- delta doesn't change the voltage very much.
+We want to get the current Ia and Va to the operating point shown in the IV characteristics of the zener diode shown below
+
+![IV-zener](IV-zener.png)
+
+The max power rating of the diode is 500mW, so we set our max power to 375mW and used this to calculate the resistance we need for the circuit.
+For an output voltage of 4.7V and 375mW, we need a resistance of 390 ohms.
+
+### Filter
+
+![filter](filter.png)
+
+The filter is used to reduce the ripple from the rectifier output:
+
+![filter-output](filter-output.png)
+
+Vripple,out = 90mV, incremental resistance diode = 19 ohms, resistor = 390 ohms
+
+Vripple,out = Vripple,c * (Rz / (Rz+Rs))
+
+Vripple,c = Vripple,out * (Rz + Rs)/Rz
+
+= 90mV * (19 + 390)/19 = 1.93 V
+
+Vripple,c = I/(fC) -> C = I/(f\*Vripple,c) = 80/(120 * 1.93) = 345uF ~ 350uF
+
+Design so far:
+
+![low-V-supply](low-V-supply.png)
+
+LTSpice simulation:
+
+![sim1](sim1.png)
+
+### Op-Amp
 
 
-## Regulator
+
+### BJT
 
 
-## Filter
-
-
-## Op-Amp
-
-
-## BJT
-
-
-## Final Design
+### Final Design
 
 
 
