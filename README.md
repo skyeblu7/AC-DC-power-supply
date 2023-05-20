@@ -75,7 +75,7 @@ For an output voltage of 4.7V and 375mW, we need a resistance of 390 ohms.
 
 The filter is used to reduce the ripple from the rectifier output:
 
-![filter-output](filter-output.png)
+![filter-output](filter-wave.png)
 
 Vripple,out = 90mV, incremental resistance diode = 19 ohms, resistor = 390 ohms
 
