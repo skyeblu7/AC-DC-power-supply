@@ -9,7 +9,6 @@
   * [Filter](#filter)
   * [Op-Amp](#op-amp)
   * [BJT](#bjt)
-  * [Final Design](#final-design)
 * [Acknowledgements](#acknowledgements)
 
 
@@ -138,8 +137,6 @@ Our final design schematic:
 LTSpice simulations:
 
 ![final-supply-table](final-supply-table.png)
-
-### Final Design
 
 
 
